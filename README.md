@@ -12,10 +12,10 @@ Since we can use Bellman-Ford as an efficient way to detect negative cycles in a
 
 Check out [RESOURCES.md](./RESOURCES.md) for a Python example of the code and more resouces about the Bellman-Ford algo.  
 
-Clone the repo and navigate to the `www` dirc, and run the web app. If you need to recompile the wasm then follow the `wasm-pack` instructions below. 
+Clone the repo and navigate to the `web` dirc, and run the web app. If you need to recompile the wasm then follow the `wasm-pack` instructions below. 
 ```bash
 git clone https://github.com/drbh/wasm-bellman-ford.git
-cd www
+cd web
 npm install
 npm run start
 ```
