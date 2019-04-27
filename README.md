@@ -13,7 +13,7 @@ Since we can use Bellman-Ford as an efficient way to detect negative cycles in a
 Check out [RESOURCES.md](./RESOURCES.md) for a Python example of the code and more resouces about the Bellman-Ford algo.  
 
 Clone the repo and navigate to the `www` dirc, and run the web app. If you need to recompile the wasm then follow the `wasm-pack` instructions below. 
-```
+```bash
 git clone https://github.com/drbh/wasm-bellman-ford.git
 cd www
 npm install
@@ -30,7 +30,7 @@ http://localhost:8080/
 
 In the example file `index.html` just loads in `index.js` which is the file that interacts with the wasm library. Here is the full code in `index.js` and you can see how we pass a JSON payload into the wasm function.
 
-```
+```javascript
 import * as wasm from "wasm-bellman-ford";
 
 var data = JSON.stringify(
@@ -50,7 +50,7 @@ console.log(bool_response)
 This Bellman Ford algorithim is written in rust and can be used as a component in a larger application or can be editied for other wasm uses. 
 
 Here we see an example function that reads in a JSON formatted string, wich `bellman_ford_neg_cycle` will parse.
-```
+```rust
 fn main() {
     let data = r#"
         {
